@@ -1,10 +1,11 @@
 :root {
-    --first-color: black;
-    --second-color: white;
-    --third-color: brown;
-    --fourth-color: lightgrey;
+    --base-color: black;
+    --wall-color: yellow;
+    --roof-color: #661919;
     --windows-color: lightblue;
-    --barrier-color: lightyellow;
+    --frame-color: white;
+    --barrier-color: grey;
+    --border: 2px solid var(--frame-color);
 }
 
 * {
@@ -18,80 +19,117 @@ body {
     justify-content: center;
 }
 
-.house {
-    width: 630px;
+.building {
+    width: 720px;
     height: 300px;
-    background: red;
-    display: flex;
-    flex-wrap: wrap;
+    /*background: blue;*/
     position: relative;
 }
 
-.left-part {
-    width: 150px;
-    height: 120px;
+.top-part {
+    width: 0;
+    height: 0;
+    border-left: 330px solid transparent;
+    border-right: 330px solid transparent;
+    border-bottom: 150px solid yellow;
     position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
-.left-part .barrier {
-    width: 120px;
-    height: 30px;
-    background: var(--barrier-color);
-}
-
-.left-part .barrier-part {
-    width: 30px;
-    height: 30px;
-    border-left: 1px solid var(--first-color);
-}
-
-.left-part .wall {
-    width: 150px;
-    height: 90px;
-    background: var(--fourth-color);
-    border: 1px solid var(--first-color);
-}
-
-.left-part .windows-box {
-    width: 90px;
-    height: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    bottom: 0;
     left: 30px;
+    bottom: 120px;
 }
 
-.left-part .window {
-    width: 30px;
-    height: 60px;
-}
-
-.glass {
-    width: 30px;
-    height: 30px;
-    background: var(--windows-color);
-    border: 1px solid var(--first-color);
-}
-
-.central-part {
-    width: 150px;
-    height: 240px;
-    background: green;
+.roof {
+    width: 0;
+    height: 0;
+    border-left: 355px solid transparent;
+    border-right: 355px solid transparent;
+    border-bottom: 160px solid var(--roof-color);
     position: absolute;
-    left: 120px;
+    left: 5px;
+    bottom: 120px;
+}
+
+
+.bottom-part {
+    width: 660px;
+    height: 120px;
+    background: red;
+    position: absolute;
+    left: 30px;
     bottom: 0;
 }
 
-.right-part {
-    width: 360px;
-    height: 300px;
-    background: blue;
+.bottom-wall {
+    width: 660px;
+    height: 120px;
+    background: url("../img/dark_brick_wall.png");
+    /* Background pattern from Toptal Subtle Patterns */
+    opacity: .7;
+}
+
+.pillar {
+    width: 5px;
+    height: 120px;
+    background: var(--barrier-color);
+    position: absolute;
+    bottom: 0;
+}
+
+.barrier-left {
+    left: 0;
+}
+
+.penthouse {
+    width: 500px;
+    height: 10px;
+    background: var(--barrier-color);
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+.barrier-right {
+    right: 180px;
+}
+
+.billboard-left {
+    left: 270px;
+}
+
+.billboard-top, .billboard-bottom {
+    width: 60px;
+    height: 3px;
+    background: var(--barrier-color);
     position: absolute;
     left: 270px;
-    bottom: 0;
 }
 
+.billboard-top {
+    top: 40px;
+}
+
+.billboard-bottom {
+    bottom: 30px;
+}
+
+.billboard-right {
+    left: 330px;
+}
+
+.barrier-carts {
+    width: 150px;
+    height: 3px;
+    background: var(--barrier-color);
+    position: absolute;
+    left: 330px;
+    bottom: 30px;
+}
+
+.barrier-carts .barrier-part {
+    width: 30px;
+    height: 33px;
+    border-left: 2px solid var(--barrier-color);
+    border-right: 2px solid var(--barrier-color);
+    display: inline-block;
+
+}
 
