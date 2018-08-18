@@ -3,7 +3,7 @@
     --wall-color: yellow;
     --roof-color: #661919;
     --windows-color: lightblue;
-    --frame-color: white;
+    --frame-color: lightgrey;
     --barrier-color: grey;
     --border: 2px solid var(--frame-color);
 }
@@ -16,14 +16,16 @@
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 .building {
-    width: 720px;
+    width: 100%;
     height: 300px;
     /*background: blue;*/
     position: relative;
+    margin: 10px 80px;
 }
 
 .top-part {
@@ -72,6 +74,7 @@ body {
     background: var(--barrier-color);
     position: absolute;
     bottom: 0;
+    z-index: 1;
 }
 
 .barrier-left {
@@ -91,6 +94,51 @@ body {
     right: 180px;
 }
 
+.door-box {
+    width: 120px;
+    height: 90px;
+    background: green;
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.door-box .window-left, .door-box .window-right {
+    width: 30px;
+    height: 90px;
+    background: var(--windows-color);
+    border: 5px solid lightgrey;
+}
+
+.door {
+    width: 60px;
+    height: 90px;
+    background: var(--base-color);
+    border: 5px solid lightgrey;
+    border-bottom: 0;
+}
+
+.bin {
+    width: 32px;
+    height: 32px;
+    background: url("../img/bin.png");
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+}
+
+.window {
+    width: 60px;
+    height: 60px;
+    background: var(--windows-color);
+    border: 5px solid lightgrey;
+    position: absolute;
+    top: 30px;
+    left: 180px;
+}
+
 .billboard-left {
     left: 270px;
 }
@@ -101,6 +149,7 @@ body {
     background: var(--barrier-color);
     position: absolute;
     left: 270px;
+    z-index: 1;
 }
 
 .billboard-top {
@@ -113,6 +162,33 @@ body {
 
 .billboard-right {
     left: 330px;
+}
+
+.billboard-central {
+    width: 55px;
+    height: 44px;
+    background: var(--frame-color);
+    position: absolute;
+    top: 43px;
+    left: 275px;
+    z-index: 0;
+}
+
+.window-left-small, .window-right-small {
+    width: 30px;
+    height: 20px;
+    background: var(--windows-color);
+    border: 5px solid lightgrey;
+    position: absolute;
+    top: 20px;
+}
+
+.window-left-small {
+    left: 360px;
+}
+
+.window-right-small {
+    left: 425px;
 }
 
 .barrier-carts {
@@ -130,6 +206,37 @@ body {
     border-left: 2px solid var(--barrier-color);
     border-right: 2px solid var(--barrier-color);
     display: inline-block;
-
 }
 
+.bike {
+    width: 64px;
+    height: 64px;
+    background: url("../img/bike.png");
+    position: absolute;
+    bottom: -10px;
+    right: -5px;
+}
+
+.cash-machine {
+    width: 32px;
+    height: 32px;
+    background: url("../img/atm.png");
+    position: absolute;
+    bottom: 35px;
+    right: 100px;
+}
+
+.billboard-big {
+    width: 60px;
+    height: 50px;
+    background: lightgrey;
+    border: 5px solid grey;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+.footer {
+    width: 100%;
+    margin: 100px;
+}
