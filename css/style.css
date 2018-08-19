@@ -1,8 +1,8 @@
 :root {
     --base-color: black;
-    --wall-color: yellow;
+    --wall-color: #FAFD00;
     --roof-color: #661919;
-    --windows-color: lightblue;
+    --windows-color: skyblue;
     --frame-color: lightgrey;
     --barrier-color: grey;
     --border: 2px solid var(--frame-color);
@@ -15,17 +15,22 @@
 }
 
 body {
+    /*background: lightblue;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.building {
-    width: 100%;
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.shop {
+    width: 700px;
     height: 300px;
-    /*background: blue;*/
     position: relative;
-    margin: 10px 80px;
+    top: 50px;
 }
 
 .top-part {
@@ -33,7 +38,7 @@ body {
     height: 0;
     border-left: 330px solid transparent;
     border-right: 330px solid transparent;
-    border-bottom: 150px solid yellow;
+    border-bottom: 150px solid var(--wall-color);
     position: absolute;
     left: 30px;
     bottom: 120px;
@@ -52,7 +57,7 @@ body {
 .sign {
     width: 142px;
     height: 70px;
-    background: url("../img/biedronkalogo.png");
+    background: url("../img/biedronkalogo.png") no-repeat;
     position: absolute;
     top: 50px;
     left: 50%;
@@ -105,7 +110,6 @@ body {
 .door-box {
     width: 120px;
     height: 90px;
-    background: green;
     position: absolute;
     left: 30px;
     bottom: 0;
@@ -117,21 +121,21 @@ body {
     width: 30px;
     height: 90px;
     background: var(--windows-color);
-    border: 5px solid lightgrey;
+    border: 5px solid var(--frame-color);
 }
 
 .door {
     width: 60px;
     height: 90px;
     background: var(--base-color);
-    border: 5px solid lightgrey;
+    border: 5px solid var(--frame-color);
     border-bottom: 0;
 }
 
 .bin {
     width: 32px;
     height: 32px;
-    background: url("../img/bin.png");
+    background: url("../img/bin.png") no-repeat;
     position: absolute;
     bottom: 0;
     left: 150px;
@@ -141,7 +145,7 @@ body {
     width: 60px;
     height: 60px;
     background: var(--windows-color);
-    border: 5px solid lightgrey;
+    border: 5px solid var(--frame-color);
     position: absolute;
     top: 30px;
     left: 180px;
@@ -186,7 +190,7 @@ body {
     width: 30px;
     height: 20px;
     background: var(--windows-color);
-    border: 5px solid lightgrey;
+    border: 5px solid var(--frame-color);
     position: absolute;
     top: 20px;
 }
@@ -219,7 +223,7 @@ body {
 .bike {
     width: 64px;
     height: 64px;
-    background: url("../img/bike.png");
+    background: url("../img/bike.png") no-repeat;
     position: absolute;
     bottom: -10px;
     right: -5px;
@@ -228,7 +232,7 @@ body {
 .cash-machine {
     width: 32px;
     height: 32px;
-    background: url("../img/atm.png");
+    background: url("../img/atm.png") no-repeat;
     position: absolute;
     bottom: 35px;
     right: 100px;
@@ -237,14 +241,14 @@ body {
 .billboard-big {
     width: 60px;
     height: 50px;
-    background: lightgrey;
-    border: 5px solid grey;
+    background: var(--frame-color);
+    border: 5px solid var(--barrier-color);
     position: absolute;
     top: 20px;
     right: 15px;
 }
 
-.footer {
+.icons{
     width: 100%;
     margin: 100px;
 }
