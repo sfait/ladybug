@@ -49,7 +49,15 @@ body {
     left: 5px;
     bottom: 120px;
 }
-
+.sign {
+    width: 142px;
+    height: 70px;
+    background: url("../img/biedronkalogo.png");
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -70px;
+}
 
 .bottom-part {
     width: 660px;
