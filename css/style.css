@@ -356,3 +356,179 @@ body {
     border: 1px solid #4dba87;
     margin: 10px;
 }
+
+.road {
+    width: 100%;
+    height: 110px;
+    background: var(--base-color);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.kerbstone {
+    width: 100%;
+    height: 10px;
+    background: var(--frame-color);
+    position: absolute;
+    top: 0;
+}
+
+.road p {
+    color: lightgoldenrodyellow;
+    margin: 10px;
+}
+
+.road a {
+    color: lightgoldenrodyellow;
+}
+
+.road a:hover {
+    color: #4dba87;
+}
+
+
+/*GAME*/
+
+#board {
+    width: 640px;
+    height: 640px;
+    margin: 15px 50px 0 200px;
+    float: left;
+}
+
+#board  > div {
+    border: 1px solid white;
+    background-color: rgba(17, 9, 31, 0.90);
+    float: left;
+    width: 64px;
+    height: 64px;
+}
+
+.player {
+    background: url("../img/crab.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.item {
+    background-image: url("../img/prawn.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.right-content {
+    width: 200px;
+    height: 300px;
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black;
+    text-align: left;
+    float: left;
+    display: block;
+}
+
+h1 {
+    color: #FF5D48;
+    font-size: 40px;
+    margin: 0 0 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+ul {
+    margin: 0 0 50px 0;
+}
+
+.score {
+    width: 100%;
+    line-height: 50px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: rgba(17, 9, 31, 0.9);
+    color: #FF5D48;
+    margin: 40px 0;
+    text-transform: uppercase;
+}
+
+
+span {
+    font-size: 30px;
+    color: white;
+}
+
+
+.icon {
+    width: 300px;
+    margin: 90px 0;
+}
+
+.icon a {
+    color: white;
+}
+
+.icon a:hover {
+    color: rgba(17, 9, 31, 0.9);
+}
+
+section#over {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: url("../img/image.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.invisible {
+    display: none;
+}
+
+.game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+}
+
+.game-over button {
+    width: 250px;
+    height: 100px;
+    font-size: 30px;
+    color: rgba(17, 9, 31, 0.9);
+    background-color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+    border: 3px solid rgba(17, 9, 31, 0.9);
+    border-radius: 30px;
+    margin: 50% 0;
+}
+
+.game-over button:hover {
+    color: white;
+    border-color: white;
+    background-color: rgba(17, 9, 31, 0.9);
+    cursor: pointer;
+}
+
+.game-over .score {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.game-over span {
+    color: white;
+    font-size: 40px;
+}
