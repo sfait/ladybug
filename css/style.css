@@ -15,7 +15,7 @@
 }
 
 body {
-    /*background: lightblue;*/
+    font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,6 +132,22 @@ body {
     background: var(--base-color);
     border: 5px solid var(--frame-color);
     border-bottom: 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.shop .door a {
+    color: yellow;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.shop .door a:hover {
+    color: #4dba87;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 .bin {
@@ -248,6 +264,7 @@ body {
     position: absolute;
     top: 20px;
     right: 15px;
+    padding: 5px;
 }
 
 .background {
@@ -401,6 +418,25 @@ body {
     color: #4dba87;
 }
 
+.rules {
+    width: 300px;
+    height: 50px;
+    word-spacing: 3px;
+    padding: 20px;
+    margin: 5px 40px;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    text-shadow: 1px 1px black;
+    color: grey;
+}
+
+li {
+    line-height: 25px;
+}
+
 
 /*GAME*/
 
@@ -420,29 +456,29 @@ body {
 }
 
 .player {
-    background: url("../img/crab.png");
+    background: url("../img/ladybug.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .item {
-    background-image: url("../img/prawn.png");
+    background-image: url("../img/shopping-basket.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.right-content {
-    width: 200px;
-    height: 300px;
-    margin: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px black;
-    text-align: left;
-    float: left;
-    display: block;
-}
+/*.right-content {*/
+    /*width: 200px;*/
+    /*height: 300px;*/
+    /*margin: 15px;*/
+    /*font-size: 20px;*/
+    /*font-weight: bold;*/
+    /*color: white;*/
+    /*text-shadow: 1px 1px black;*/
+    /*text-align: left;*/
+    /*float: left;*/
+    /*display: block;*/
+/*}*/
 
 h1 {
     color: #FF5D48;
@@ -452,13 +488,13 @@ h1 {
     text-transform: uppercase;
 }
 
-h2 {
-    font-size: 25px;
-}
+/*h2 {*/
+    /*font-size: 25px;*/
+/*}*/
 
-ul {
-    margin: 0 0 50px 0;
-}
+/*ul {*/
+    /*margin: 0 0 50px 0;*/
+/*}*/
 
 .score {
     width: 100%;
