@@ -377,8 +377,12 @@ body {
 }
 
 .road p {
+    width: 100%;
     color: lightgoldenrodyellow;
     margin: 10px;
+    padding: 10px;
+    border-top: 5px dashed lightgoldenrodyellow;
+    text-align: right;
 }
 
 .road a {
