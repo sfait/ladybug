@@ -1,4 +1,11 @@
-# Biedronka
-Biedronka in CSS.
+# Sklep Biedronka 
+Game in JavaScript. 
 
-**Link:** https://sfait.github.io/biedronka/
+![alt "Biedronka"](https://github.com/sfait/sklep-biedronka/blob/master/images/screen.png "Biedronka")
+
+**Technologies:**
+* HTML
+* CSS
+* JavaScript
+
+**Link:** https://sfait.github.io/sklep-biedronka/
