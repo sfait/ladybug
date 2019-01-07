@@ -1,529 +1,493 @@
 :root {
-    --base-color: black;
-    --wall-color: #FAFD00;
-    --roof-color: #661919;
-    --windows-color: skyblue;
-    --frame-color: lightgrey;
-    --barrier-color: grey;
-    --border: 2px solid var(--frame-color);
+  --base-color: black;
+  --wall-color: #FAFD00;
+  --roof-color: #661919;
+  --windows-color: skyblue;
+  --frame-color: lightgrey;
+  --barrier-color: grey;
+  --border: 2px solid var(--frame-color);
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background: rgba(17, 9, 31, 0.9);
-    font-family: 'Lato', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: lightgoldenrodyellow;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .wrapper {
-    width: 1000px;
-    margin: 100px auto;
+  width: 1000px;
+  margin: 100px auto;
 }
+
+/* Shop */
 
 .shop {
-    width: 700px;
-    height: 300px;
-    position: relative;
-    top: 50px;
-    left: 50%;
-    margin-left: -350px;
-    z-index: 2;
+  width: 700px;
+  height: 300px;
+  position: relative;
+  top: 50px;
+  left: 50%;
+  margin-left: -350px;
+  z-index: 2;
 }
 
+/* Shop - top */
+
 .top-part {
-    width: 0;
-    height: 0;
-    border-left: 330px solid transparent;
-    border-right: 330px solid transparent;
-    border-bottom: 150px solid var(--wall-color);
-    position: absolute;
-    left: 30px;
-    bottom: 120px;
+  width: 0;
+  height: 0;
+  border-left: 330px solid transparent;
+  border-right: 330px solid transparent;
+  border-bottom: 150px solid var(--wall-color);
+  position: absolute;
+  left: 30px;
+  bottom: 120px;
 }
 
 .roof {
-    width: 0;
-    height: 0;
-    border-left: 355px solid transparent;
-    border-right: 355px solid transparent;
-    border-bottom: 160px solid var(--roof-color);
-    position: absolute;
-    left: 5px;
-    bottom: 120px;
+  width: 0;
+  height: 0;
+  border-left: 355px solid transparent;
+  border-right: 355px solid transparent;
+  border-bottom: 160px solid var(--roof-color);
+  position: absolute;
+  left: 5px;
+  bottom: 120px;
 }
 
 .logo {
-    width: 154px;
-    height: 70px;
-    background: url("../img/biedronkalogo.png") no-repeat;
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    margin-left: -70px;
+  width: 154px;
+  height: 70px;
+  background: url("../images/biedronkalogo.png") no-repeat;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -70px;
 }
 
+/* Shop - bottom */
+
 .bottom-part {
-    width: 660px;
-    height: 120px;
-    background: red;
-    position: absolute;
-    left: 30px;
-    bottom: 0;
+  width: 660px;
+  height: 120px;
+  background: red;
+  position: absolute;
+  left: 30px;
+  bottom: 0;
 }
 
 .bottom-wall {
-    width: 660px;
-    height: 120px;
-    background: url("../img/dark_brick_wall.png");
-    /* Background pattern from Toptal Subtle Patterns */
-    opacity: .7;
+  width: 660px;
+  height: 120px;
+  background: url("../images/dark_brick_wall.png");
+  /* Background pattern from Toptal Subtle Patterns */
+  opacity: .7;
 }
 
 .pillar {
-    width: 5px;
-    height: 120px;
-    background: var(--barrier-color);
-    position: absolute;
-    bottom: 0;
-    z-index: 1;
+  width: 5px;
+  height: 120px;
+  background: var(--barrier-color);
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
 }
 
 .barrier-left {
-    left: 0;
+  left: 0;
 }
 
 .penthouse {
-    width: 500px;
-    height: 10px;
-    background: var(--barrier-color);
-    position: absolute;
-    top: 0;
-    left: -10px;
+  width: 500px;
+  height: 10px;
+  background: var(--barrier-color);
+  position: absolute;
+  top: 0;
+  left: -10px;
 }
 
 .barrier-right {
-    right: 180px;
+  right: 180px;
 }
 
 .door-box {
-    width: 120px;
-    height: 90px;
-    position: absolute;
-    left: 30px;
-    bottom: 0;
-    display: flex;
-    flex-wrap: wrap;
+  width: 120px;
+  height: 90px;
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .door-box .window-left, .door-box .window-right {
-    width: 30px;
-    height: 90px;
-    background: var(--windows-color);
-    border: 5px solid var(--frame-color);
+  width: 30px;
+  height: 90px;
+  background: var(--windows-color);
+  border: 5px solid var(--frame-color);
 }
 
 .door {
-    width: 60px;
-    height: 90px;
-    background: var(--base-color);
-    border: 5px solid var(--frame-color);
-    border-bottom: 0;
-    display: flex;
-    align-items: center;
-    text-align: center;
+  width: 60px;
+  height: 90px;
+  background: var(--base-color);
+  border: 5px solid var(--frame-color);
+  border-bottom: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .shop .door a {
-    color: yellow;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
+  color: yellow;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .shop .door a:hover {
-    color: #4dba87;
-    text-decoration: none;
-    font-size: 14px;
+  color: #4dba87;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .bin {
-    width: 32px;
-    height: 32px;
-    background: url("../img/bin.png") no-repeat;
-    position: absolute;
-    bottom: 0;
-    left: 150px;
+  width: 32px;
+  height: 32px;
+  background: url("../images/bin.png") no-repeat;
+  position: absolute;
+  bottom: 0;
+  left: 150px;
 }
 
 .window {
-    width: 60px;
-    height: 60px;
-    background: var(--windows-color);
-    border: 5px solid var(--frame-color);
-    position: absolute;
-    top: 30px;
-    left: 180px;
+  width: 60px;
+  height: 60px;
+  background: var(--windows-color);
+  border: 5px solid var(--frame-color);
+  position: absolute;
+  top: 30px;
+  left: 180px;
 }
 
 .billboard-left {
-    left: 270px;
+  left: 270px;
 }
 
 .billboard-top, .billboard-bottom {
-    width: 60px;
-    height: 3px;
-    background: var(--barrier-color);
-    position: absolute;
-    left: 270px;
-    z-index: 1;
+  width: 60px;
+  height: 3px;
+  background: var(--barrier-color);
+  position: absolute;
+  left: 270px;
+  z-index: 1;
 }
 
 .billboard-top {
-    top: 40px;
+  top: 40px;
 }
 
 .billboard-bottom {
-    bottom: 30px;
+  bottom: 30px;
 }
 
 .billboard-right {
-    left: 330px;
+  left: 330px;
 }
 
 .billboard-central {
-    width: 55px;
-    height: 44px;
-    background: var(--frame-color);
-    position: absolute;
-    top: 43px;
-    left: 275px;
-    z-index: 0;
+  width: 55px;
+  height: 44px;
+  background: var(--frame-color);
+  position: absolute;
+  top: 43px;
+  left: 275px;
+  z-index: 0;
 }
 
 .window-left-small, .window-right-small {
-    width: 30px;
-    height: 20px;
-    background: var(--windows-color);
-    border: 5px solid var(--frame-color);
-    position: absolute;
-    top: 20px;
+  width: 30px;
+  height: 20px;
+  background: var(--windows-color);
+  border: 5px solid var(--frame-color);
+  position: absolute;
+  top: 20px;
 }
 
 .window-left-small {
-    left: 360px;
+  left: 360px;
 }
 
 .window-right-small {
-    left: 425px;
+  left: 425px;
 }
 
 .barrier-carts {
-    width: 150px;
-    height: 3px;
-    background: var(--barrier-color);
-    position: absolute;
-    left: 330px;
-    bottom: 30px;
+  width: 150px;
+  height: 3px;
+  background: var(--barrier-color);
+  position: absolute;
+  left: 330px;
+  bottom: 30px;
 }
 
 .barrier-carts .barrier-part {
-    width: 30px;
-    height: 33px;
-    border-left: 2px solid var(--barrier-color);
-    border-right: 2px solid var(--barrier-color);
-    display: inline-block;
+  width: 30px;
+  height: 33px;
+  border-left: 2px solid var(--barrier-color);
+  border-right: 2px solid var(--barrier-color);
+  display: inline-block;
 }
 
 .bike {
-    width: 64px;
-    height: 64px;
-    background: url("../img/bike.png") no-repeat;
-    position: absolute;
-    bottom: -10px;
-    right: -5px;
+  width: 64px;
+  height: 64px;
+  background: url("../images/bike.png") no-repeat;
+  position: absolute;
+  bottom: -10px;
+  right: -5px;
 }
 
 .cash-machine {
-    width: 32px;
-    height: 32px;
-    background: url("../img/atm.png") no-repeat;
-    position: absolute;
-    bottom: 35px;
-    right: 100px;
+  width: 32px;
+  height: 32px;
+  background: url("../images/atm.png") no-repeat;
+  position: absolute;
+  bottom: 35px;
+  right: 100px;
 }
 
 .billboard-big {
-    width: 60px;
-    height: 50px;
-    background: var(--frame-color);
-    border: 5px solid var(--barrier-color);
-    position: absolute;
-    top: 20px;
-    right: 15px;
-    padding: 5px;
+  width: 60px;
+  height: 50px;
+  background: var(--frame-color);
+  border: 5px solid var(--barrier-color);
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  padding: 5px;
 }
+
+/* Background */
 
 .background {
-    width: 100%;
-    height: 100vh;
-    background: url("../img/batthern.png");
-    /* Background pattern from Toptal Subtle Patterns */
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url("../images/batthern.png");
+  /* Background pattern from Toptal Subtle Patterns */
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-.building-box {
-    width: 100%;
-    height: 400px;
-    background: lightblue;
-    position: relative;
+/* Buildings */
+
+.buildings-box {
+  width: 100%;
+  height: 350px;
+  display: flex;
 }
 
 .building {
-    height: 350px;
-    margin: 50px 0 0 0;
-    background: lightgoldenrodyellow;
-    position: absolute;
-}
-
-.first-building {
-    width: 250px;
-    left: 0;
-}
-
-.second-building {
-    width: 150px;
-    left: 250px;
-}
-
-.third-building {
-    width: 350px;
-    left: 400px;
-}
-
-.fourth-building {
-    width: 350px;
-    left: 750px;
-}
-
-.fifth-building {
-    width: 210px;
-    left: 1100px;
-}
-
-.sixth-building {
-    width: 100%;
-    z-index: -1;
+  height: 350px;
+  width: 25%;
+  background: lightgoldenrodyellow;
+  position: relative;
 }
 
 .building .windows-box {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .staircase {
-    width: 20%;
-    height: 100%;
-    background: #4dba87;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  width: 20%;
+  height: 100%;
+  background: #4dba87;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .staircase-window {
-    width: 25px;
-    height: 20px;
-    background: var(--windows-color);
-    border: 1px solid lightgrey;
+  width: 25px;
+  height: 20px;
+  background: var(--windows-color);
+  border: 1px solid lightgrey;
 }
 
 .staircase-window-last {
-    background: transparent;
-    border: 0;
+  background: transparent;
+  border: 0;
 }
 
 .second-building .staircase-window {
-    width: 20px;
+  width: 20px;
 }
 
 .third-building .staircase-window {
-    width: 35px;
+  width: 35px;
 }
 
 .fourth-building .staircase-window {
-    width: 40px;
+  width: 40px;
 }
 
 .fifth-building .staircase-window {
-    width: 20px;
+  width: 20px;
 }
 
 .staircase-door {
-    width: 20px;
-    height: 30px;
-    background: grey;
-    border: 1px solid dimgrey;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -10px;
+  width: 20px;
+  height: 30px;
+  background: grey;
+  border: 1px solid dimgrey;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -10px;
 }
 
-.right-windows-box {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+.buildings-windows-box {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
-.right-windows {
-    width: 20px;
-    height: 20px;
-    margin: 0.5rem;
-    padding: 0;
-    background: var(--windows-color);
-    border: 1px solid #4dba87;
+.building-window {
+  width: 20px;
+  height: 20px;
+  margin: 0.5rem;
+  padding: 0;
+  background: var(--windows-color);
+  border: 1px solid #4dba87;
 }
+
+/* Road */
 
 .road {
-    width: 100%;
-    height: 15%;
-    background: var(--base-color);
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  width: 100%;
+  height: 150px;
+  background: var(--base-color);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .kerbstone {
-    width: 100%;
-    height: 10px;
-    background: var(--frame-color);
-    position: absolute;
-    top: 0;
+  width: 100%;
+  height: 10px;
+  background: var(--frame-color);
+  position: absolute;
+  top: 0;
 }
 
 .road p {
-    width: 100%;
-    color: lightgoldenrodyellow;
-    margin: 10px;
-    padding: 10px;
-    border-top: 5px dashed lightgoldenrodyellow;
-    text-align: right;
+  width: 100%;
+  color: lightgoldenrodyellow;
+  margin: 10px;
+  padding: 20px;
+  border-top: 5px dashed lightgoldenrodyellow;
+  text-align: right;
 }
 
 .road a {
-    color: lightgoldenrodyellow;
+  color: lightgoldenrodyellow;
 }
 
 .road a:hover {
-    color: #4dba87;
+  color: #4dba87;
 }
 
-.rules {
-    word-spacing: 3px;
-    padding: 0.5rem;
-    margin: 1rem 3rem;
+/* Game */
+
+.game {
+    background: url("../images/batthern.png");
+    /* Background pattern from Toptal Subtle Patterns */
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-
-h2 {
-    margin: 0 0 10px 0;
-    text-transform: uppercase;
-    text-shadow: 1px 1px black;
-    color: grey;
-}
-
-li {
-    line-height: 25px;
-}
-
-
-/*GAME*/
 
 #board {
     width: 640px;
     height: 640px;
-    margin: 15px 50px 0 200px;
-    float: left;
 }
 
 #board  > div {
-    /*border: 1px solid #4dba87;*/
-    border: 1px solid rgba(17, 9, 31, 0.9);
-    background-color: rgba(77, 186, 135, 0.4);
+    border: 1px solid lightgrey;
+    background-color: lightgoldenrodyellow;
     float: left;
     width: 64px;
     height: 64px;
 }
 
 .player {
-    background: url("../img/ladybug.png");
+    background: url("../images/ladybug.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .item {
-    background-image: url("../img/supermarket.png");
+    background-image: url("../images/supermarket.png");
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .right-content {
-    width: 200px;
-    height: 300px;
-    margin: 15px;
-    font-size: 20px;
+    width: 30%;
+    height: 100%;
+    font-size: 1.2rem;
+    color: #596675;
     font-weight: bold;
-    color: white;
-    text-shadow: 1px 1px black;
-    text-align: left;
-    float: left;
-    display: block;
+    line-height: 1.5;
+    text-align: center;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .score {
-    width: 100%;
-    line-height: 30px;
-    padding: 10px 20px;
-    text-align: center;
-    color: rgba(77, 186, 135, 0.4);
-    text-transform: uppercase;
+    font-size: 2rem;
 }
 
-
-span {
-    font-size: 25px;
-    color: white;
-}
-
-.icon {
-    width: 300px;
-    margin: 90px 0;
+.score span {
+    color: #ff6e6e;
 }
 
 .icon a {
-    color: black;
+    color: #ff6e6e;
 }
 
 .icon a:hover {
-    color: #4dba87;
+    color: #596675;
 }
+
+/*  Gameover */
 
 section#over {
     position: fixed;
@@ -532,7 +496,7 @@ section#over {
     left: 0;
     top: 0;
     z-index: 1;
-    background: url("../img/gameover.jpg") no-repeat center/contain;
+    background: url("../images/gameover.jpg") no-repeat center/cover;
     background-size: cover;
 }
 
@@ -541,40 +505,40 @@ section#over {
 }
 
 .game-over {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 50px;
 }
 
 .game-over button {
     width: 250px;
     height: 100px;
-    font-size: 30px;
-    color: rgba(17, 9, 31, 0.9);
-    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 15%;
+    font-size: 2rem;
+    color:  #ff6e6e;
+    background-color: white;
     font-weight: bold;
-    border: 3px solid rgba(17, 9, 31, 0.9);
+    border: 3px solid  #ff6e6e;
     border-radius: 30px;
-    margin: 50% 0;
-}
-
-.game-over button:hover {
-    color: white;
-    border-color: white;
-    background-color: rgba(17, 9, 31, 0.9);
     cursor: pointer;
 }
 
+.game-over button:hover {
+    color:  skyblue;
+    border-color:  skyblue;
+}
+
 .game-over .score {
-    font-size: 40px;
     color: white;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
 }
 
 .game-over span {
+    font-size: 4rem;
     color: white;
-    font-size: 40px;
 }
