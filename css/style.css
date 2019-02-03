@@ -1,5 +1,10 @@
 :root {
   --base-color: black;
+  --second-color: white;
+  --third-color: lightgoldenrodyellow;
+  --fourth-color: #4dba87;
+  --fifth-color: #596675;
+
   --wall-color: #FAFD00;
   --roof-color: #661919;
   --windows-color: skyblue;
@@ -8,6 +13,8 @@
   --border: 2px solid var(--frame-color);
 }
 
+/* var(--fifth-color) */
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,7 +22,7 @@
 }
 
 body {
-  background-color: lightgoldenrodyellow;
+  background-color: var(--third-color);
   font-family: 'Lato', sans-serif;
   display: flex;
   flex-direction: column;
@@ -147,14 +154,14 @@ body {
 }
 
 .shop .door a {
-  color: yellow;
+  color: var(--wall-color);
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
 }
 
 .shop .door a:hover {
-  color: #4dba87;
+  color: var(--fourth-color);
   text-decoration: none;
   font-size: 14px;
 }
@@ -298,9 +305,10 @@ body {
 }
 
 .building {
-  height: 350px;
   width: 25%;
-  background: lightgoldenrodyellow;
+  max-width: 500px;
+  height: 350px;
+  background: var(--third-color);
   position: relative;
 }
 
@@ -312,9 +320,10 @@ body {
 }
 
 .staircase {
-  width: 20%;
+  width: 3rem;
+  max-width: 200px;
   height: 100%;
-  background: #4dba87;
+  background: var(--fourth-color);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -323,10 +332,12 @@ body {
 }
 
 .staircase-window {
-  width: 25px;
-  height: 20px;
+  width: 1.5rem;
+  max-width: 30px;
+  height: 1.5rem;
+  max-height: 30px;
   background: var(--windows-color);
-  border: 1px solid lightgrey;
+  border: 1px solid var(--frame-color);
 }
 
 .staircase-window-last {
@@ -334,27 +345,13 @@ body {
   border: 0;
 }
 
-.second-building .staircase-window {
-  width: 20px;
-}
-
-.third-building .staircase-window {
-  width: 35px;
-}
-
-.fourth-building .staircase-window {
-  width: 40px;
-}
-
-.fifth-building .staircase-window {
-  width: 20px;
-}
-
 .staircase-door {
-  width: 20px;
-  height: 30px;
-  background: grey;
-  border: 1px solid dimgrey;
+  width: 1.3rem;
+  max-width: 20px;
+  height: 3.5rem;
+  max-height: 30px;
+  background: var(--fifth-color);
+  border: 1px solid var(--fifth-color);
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -363,6 +360,7 @@ body {
 
 .buildings-windows-box {
   width: 80%;
+  max-width: 300px;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -374,12 +372,14 @@ body {
 }
 
 .building-window {
-  width: 20px;
-  height: 20px;
+  width: 1.5rem;
+  max-width: 20px;
+  height: 1.5rem;
+  max-height: 20px;
   margin: 0.5rem;
   padding: 0;
   background: var(--windows-color);
-  border: 1px solid #4dba87;
+  border: 1px solid var(--fourth-color);
 }
 
 /* Road */
@@ -405,19 +405,19 @@ body {
 
 .road p {
   width: 100%;
-  color: lightgoldenrodyellow;
+  color: var(--third-color);
   margin: 10px;
   padding: 20px;
-  border-top: 5px dashed lightgoldenrodyellow;
+  border-top: 5px dashed var(--third-color);
   text-align: right;
 }
 
 .road a {
-  color: lightgoldenrodyellow;
+  color: var(--third-color);
 }
 
 .road a:hover {
-  color: #4dba87;
+  color: var(--fourth-color);
 }
 
 /* Game */
@@ -437,8 +437,8 @@ body {
 }
 
 #board  > div {
-    border: 1px solid lightgrey;
-    background-color: lightgoldenrodyellow;
+    border: 1px solid var(--frame-color);
+    background-color: var(--third-color);
     float: left;
     width: 64px;
     height: 64px;
@@ -460,7 +460,7 @@ body {
     width: 30%;
     height: 100%;
     font-size: 1.2rem;
-    color: #596675;
+    color: var(--fifth-color);
     font-weight: bold;
     line-height: 1.5;
     text-align: center;
@@ -476,15 +476,15 @@ body {
 }
 
 .score span {
-    color: #ff6e6e;
+    color: var(--fourth-color);
 }
 
 .icon a {
-    color: #ff6e6e;
+    color: var(--fourth-color);
 }
 
 .icon a:hover {
-    color: #596675;
+    color: var(--fifth-color);
 }
 
 /*  Gameover */
@@ -514,25 +514,42 @@ section#over {
 }
 
 .game-over button {
-    width: 250px;
-    height: 100px;
-    margin-top: 15%;
-    font-size: 2rem;
-    color:  #ff6e6e;
-    background-color: white;
-    font-weight: bold;
-    border: 3px solid  #ff6e6e;
-    border-radius: 30px;
-    cursor: pointer;
+  padding: 1.3rem 3rem;
+  margin: 1.5rem 0;
+  background: var(--second-color);
+  border: none;
+  font-weight: bold;
+  color: var(--fourth-color);
+  border-radius: 30px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.game-over button::after {
+  content: '';
+  width: 100%;
+  height: 0;
+  background: var(--fourth-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 30px;
+  transition: 0.3s;
 }
 
 .game-over button:hover {
-    color:  skyblue;
-    border-color:  skyblue;
+  color: var(--second-color);
+}
+
+.game-over button:hover::after {
+  height: 100%;
 }
 
 .game-over .score {
-    color: white;
+    color: var(--second-color);
     font-size: 4rem;
     font-weight: bold;
     text-align: center;
@@ -540,5 +557,5 @@ section#over {
 
 .game-over span {
     font-size: 4rem;
-    color: white;
+    color: var(--second-color);
 }
