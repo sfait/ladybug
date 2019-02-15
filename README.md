@@ -8,4 +8,4 @@ Game in JavaScript.
 * CSS
 * JavaScript
 
-**Link:** https://sfait.github.io/sklep-biedronka/
+**Link:** https://sfait.github.io/ladybug/
