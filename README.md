@@ -1,4 +1,4 @@
-# Sklep Biedronka 
+# Ladybug
 Game in JavaScript. 
 
 ![alt "Biedronka"](https://github.com/sfait/sklep-biedronka/blob/master/images/screen.png "Biedronka")
