@@ -166,6 +166,22 @@ body {
   font-size: 14px;
 }
 
+.duck {
+  width: 16px;
+  height: 16px;
+  background: url("../images/duck.png") no-repeat;
+  position: absolute;
+  bottom: -5px;
+  left: -20px;
+  cursor: pointer;
+}
+
+.duck:hover::before {
+    content: "kwa?";
+    position: absolute;
+    top: -25px;
+}
+
 .bin {
   width: 32px;
   height: 32px;
